@@ -17,7 +17,7 @@ return {
                 dim_nc_background = false,
                 disable_background = true,
                 disable_float_background = false,
-                disable_italics = false,
+                disable_italics = true,
             })
         end,
     },

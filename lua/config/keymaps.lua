@@ -29,15 +29,15 @@ nmap("J", "mzJ`z", "Unwrap lines")
 
 nmap("<leader>key", "<cmd>Telescope keymaps<CR>", "Show all keymaps")
 
--- harpoon keymaps to override defaults
-local status, harpoon = pcall(require, "harpoon")
-if status then
-    nmap("<leader>a", function() harpoon:list():append() end, "Add to harpoon list")
-    nmap("<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, "")
-    nmap("<C-y>", function() harpoon:list():select(1) end, "Select 1st file from harpoon")
-    nmap("<C-h>", function() harpoon:list():select(2) end, "Select 2nd file from harpoon")
-    nmap("<C-n>", function() harpoon:list():select(3) end, "Select 3rd file from harpoon")
-    nmap("<C-m>", function() harpoon:list():select(4) end, "Select 4th file from harpoon")
-end
+-- -- harpoon keymaps to override defaults
+-- local status, harpoon = pcall(require, "harpoon")
+-- if status then
+--     nmap("<leader>a", function() harpoon:list():append() end, "Add to harpoon list")
+--     nmap("<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, "")
+--     nmap("<C-y>", function() harpoon:list():select(1) end, "Select 1st file from harpoon")
+--     nmap("<C-h>", function() harpoon:list():select(2) end, "Select 2nd file from harpoon")
+--     nmap("<C-n>", function() harpoon:list():select(3) end, "Select 3rd file from harpoon")
+--     nmap("<C-m>", function() harpoon:list():select(4) end, "Select 4th file from harpoon")
+-- end
 
 -- overrides
