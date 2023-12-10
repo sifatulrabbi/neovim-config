@@ -14,14 +14,16 @@ require("lazy").setup({
 
         { import = "lazyvim.plugins.extras.lang.typescript" },
         { import = "lazyvim.plugins.extras.lang.json" },
-        { import = "plugins" },
         { import = "lazyvim.plugins.extras.linting.eslint" },
         { import = "lazyvim.plugins.extras.formatting.prettier" },
         { import = "lazyvim.plugins.extras.lang.typescript" },
         { import = "lazyvim.plugins.extras.lang.json" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
-        -- { import = "lazyvim.plugins.extras.lang.rust" },
+        { import = "lazyvim.plugins.extras.lang.rust" },
+
+        { import = "plugins" },
     },
+
     defaults = {
         -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
         -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
@@ -30,8 +32,11 @@ require("lazy").setup({
         -- have outdated releases, which may break your Neovim install.
         version = false, -- always use the latest git commit
     },
-    install = { colorscheme = { "tokyonight" } },
+
+    -- install = { colorscheme = { "tokyonight" } },
+
     checker = { enabled = true }, -- automatically check for plugin updates
+
     performance = {
         rtp = {
             -- disable some rtp plugins
