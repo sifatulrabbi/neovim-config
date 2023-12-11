@@ -19,6 +19,8 @@ return {
                 disable_float_background = false,
                 disable_italics = true,
             })
+
+            vim.cmd("colorscheme rose-pine")
         end,
     },
 }

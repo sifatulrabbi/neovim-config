@@ -37,10 +37,10 @@ local function setup_harpoon()
     nmap("<leader>a", function() harpoon:list():append() end, "Add to Harpoon list")
     nmap("<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, "Harpoon menu")
 
-    nmap("<C-h>", function() harpoon:list():select(1) end)
-    nmap("<C-t>", function() harpoon:list():select(2) end)
+    nmap("<C-y>", function() harpoon:list():select(1) end)
+    nmap("<C-h>", function() harpoon:list():select(2) end)
     nmap("<C-n>", function() harpoon:list():select(3) end)
-    nmap("<C-s>", function() harpoon:list():select(4) end)
+    nmap("<C-m>", function() harpoon:list():select(4) end)
 end
 
 setup_harpoon()
