@@ -1,7 +1,7 @@
 -- disable trouble
 return {
     { "nvim-neo-tree/neo-tree.nvim", enabled = false },
-    -- { "akinsho/bufferline.nvim", enabled = false },
+    { "akinsho/bufferline.nvim", enabled = false },
     { "nvimdev/dashboard-nvim", enabled = false },
     { "catppuccin/nvim", enabled = false },
     { "catppuccin", enabled = false },
