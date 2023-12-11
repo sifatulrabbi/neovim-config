@@ -1,28 +1,27 @@
 return {
-    -- change trouble config
     {
         "folke/trouble.nvim",
-        -- opts will be merged with the parent spec
-        opts = { use_diagnostic_signs = true },
+        opts = {
+            use_diagnostic_signs = true,
+        },
     },
 
-    -- the opts function can also be used to change the default opts:
     {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
-        opts = function(_, opts)
-            table.insert(opts.sections.lualine_x, "😄")
-        end,
+        opts = {
+            options = {},
+        },
     },
 
-    -- or you can return new options to override all the defaults
     {
-        "nvim-lualine/lualine.nvim",
+        "akinsho/bufferline.nvim",
         event = "VeryLazy",
-        opts = function()
-            return {
-                --[[add your custom lualine config here]]
-            }
-        end,
+        opts = {
+            options = {
+                show_buffer_close_icons = false,
+                show_close_icon = false,
+            },
+        },
     },
 }
