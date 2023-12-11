@@ -29,3 +29,18 @@ nmap("J", "mzJ`z", "Unwrap lines")
 
 nmap("<leader>key", "<cmd>Telescope keymaps<CR>", "Show all keymaps")
 nmap("<leader>gx", "<cmd>Ex<CR>", "Netrw")
+
+local function setup_harpoon()
+    local loaded, harpoon = pcall(require, "harpoon")
+    if not loaded then return end
+
+    nmap("<leader>a", function() harpoon:list():append() end, "Add to Harpoon list")
+    nmap("<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, "Harpoon menu")
+
+    nmap("<C-h>", function() harpoon:list():select(1) end)
+    nmap("<C-t>", function() harpoon:list():select(2) end)
+    nmap("<C-n>", function() harpoon:list():select(3) end)
+    nmap("<C-s>", function() harpoon:list():select(4) end)
+end
+
+setup_harpoon()
